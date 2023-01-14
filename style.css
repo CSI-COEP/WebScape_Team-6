@@ -1,5 +1,9 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');*/
 
+:root{
+    --org: orange ;
+    --cardbg: rgb(51, 49, 49);
+}
 
 
 *{
@@ -22,7 +26,8 @@ html{
 }
 
 body{
-    background-color: var(--main-color);
+    background-color: rgb(31, 29, 29);
+    color: white;
 
 }
 
@@ -44,7 +49,6 @@ a{
 .btn{
     margin-top: 1rem;
     display: inline-block;
-    padding: 2rem 3.75rem;
     border-radius: 30px;
     font-size: 1.7rem;
     color:black;
@@ -57,11 +61,11 @@ a{
 }
 
 .heading{
-    color:black;
+    color: var(--org);
     text-transform: uppercase;
     font-size: 4rem;
     margin-bottom: 3.5rem;
-    border-bottom: 0.1rem solid #fff;
+    
 }
 
 .heading span{
@@ -77,9 +81,9 @@ a{
 
 .box{
     padding: 3rem;
-    background-color: #fff;
-    border-radius: 3rem 2rem;
-    min-height: 60rem;
+    background-color: var(--cardbg);
+    border-radius: 10px;
+    /* min-height: 60rem; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -118,12 +122,10 @@ a{
 
 .header{
     display: flex;
+    padding: 0 3em;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
-    padding: 0 7%;
-    margin: 2rem 7%;
-    border-radius: 30rem;
+    background-color: var(--cardbg);
     box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.75);
     position: sticky;
     top: 0;
@@ -164,14 +166,15 @@ a{
 
 .header .navbar a{
     margin: 0 1rem;
-    font-size: 1.6rem;
-    color: var(--black-color);
+    font-size: 2rem;
+    color: white;
     border-bottom: 0.2rem solid transparent;
 }
 
-.header .navbar a.active,
+
 .header .navbar a:hover{
-    border-color: var(--main-color);
+    
+    border-color: var(--org);
     padding-bottom:.5rem ;
 }
 
@@ -214,13 +217,13 @@ a{
 }
 .header .cart-items-container .cart-item .content h3{
     font-size: 2rem;
-    color: var(--black-color);
+    
     padding: 0.5rem;
 }
 
 .header .cart-items-container .cart-item .content .price{
     font-size: 1.5rem;
-    color: var(--black-color);
+    
 }
 .header .cart-items-container .cart-item .fa-times{
     position: absolute;
@@ -228,7 +231,7 @@ a{
     right: 1.5rem;
     font-size: 2rem;
     cursor: pointer;
-    color: var(--black-color);
+ 
 }
 .header .cart-items-container .btn{
     width: 100%;
@@ -252,6 +255,10 @@ a{
     margin-top: -134px;
     display: flex;
     align-items: center;
+    min-width: 100vh;
+    display: flex;
+    justify-content: space-around;
+    
 }
 
 .home .content{
@@ -260,7 +267,7 @@ a{
 
 .home .content h3{
     font-size: 6rem;
-    color:black;
+
 }
 
 .home .content p{
@@ -268,7 +275,7 @@ a{
     font-weight: 300;
     line-height: 1.8;
     padding: 1rem 0;
-    color: black;
+   
 }
 
 /* ------------------------------------------HOME SECTION */
@@ -320,6 +327,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 .products .box-container .box .box-bottom .info{
     display: flex;
@@ -365,6 +373,8 @@ a{
     display: flex;
     flex-wrap: wrap;
     column-gap: 2rem;
+    align-items: center;
+   
 }
 
 .about .row .content{
@@ -372,13 +382,14 @@ a{
 }
 
 .about .row .content h3{
+    color: white;
     font-size: 3rem;
-    color: black;
+    
 }
 
 .about .row .content p{
     font-size: 1.6rem;
-    color: black;
+    
     padding: 1rem 0;
     line-height: 1.8;
 }
@@ -386,13 +397,14 @@ a{
 /* ------------------------------------------REVIEW SECTION */
 
 .review  .box img{
-    height: 20rem;
+   height: 12em;
+   width: 12em;
+   border-radius: 50%;
    
 }
 .review .box p{
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     line-height: 1.8;
-    padding: 2rem 0;
 }
 
 .review .box .user{
@@ -415,7 +427,7 @@ a{
 /* ------------------------------------------CONTACT SECTION */
 .contact .row{
     display: flex;
-    background-color: var(--black-color);
+
     flex-wrap: wrap;
     gap: 1rem;
 }
@@ -434,7 +446,7 @@ a{
 .contact .row form h3{
     text-transform: uppercase;
     font-size: 3.5rem;
-    color: black;
+    /* color: black; */
 }
 
 .contact .row form .inputBox{
@@ -445,8 +457,8 @@ a{
 }
 
 .contact .row form .inputBox i{
-    color: black;
-    font-size: 2rem;
+    
+    font-size: 3rem;
     padding-left: 2rem;
 }
 
@@ -454,9 +466,9 @@ a{
     width: 100%;
     padding: 2rem;
     font-size: 1.7rem;
-    color: black;
+    margin-left: 3em;
     text-transform: none;
-    background-color: transparent;
+    /* background-color: transparent; */
 }
 
 .contact .row form .btn{
@@ -577,3 +589,196 @@ a{
 .footer .credit span{
     color: var(--main-color);
 }
+
+.ordernowbtn{
+    color: white;
+    border: 2px solid var(--org);
+    transition: all 0.3s;
+    padding: 1em 2.75em;
+}
+.ordernowbtn:hover{
+
+    background-color: var(--org);
+    color: white;
+}
+.myimg{
+    height: 100%;
+    width: 100%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.myimg img{
+    height: 60%;
+    width: 60%;
+}
+.box-bottom{
+    display: flex;
+    /* border: 2px solid var(--org); */
+    /* border-radius: 10px; */
+    justify-content: space-between;
+    
+}
+.box-bottom a{
+    
+    
+    color: white;
+}
+.box-head img{
+    margin-bottom: 2.5em;
+}
+.title{
+    color: var(--org);
+    margin-bottom: 0.5em;
+}
+
+.box .image{
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.price{
+    margin-bottom: 0.3em;
+}
+.myabtimg{
+    opacity: 0.6;
+}
+.menu-category{
+    color: var(--org);
+}
+.content h3{
+    color: var(--org);
+}
+h3{
+    color: white;
+}
+.learnmore{
+    /* text-align: right; */
+    
+    width: 100%;
+}
+.reviewbox{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    margin: 5em 0;
+    
+}
+@media only screen and (max-width: 500px) {
+    .reviewbox{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 5em 0;
+        
+    }
+  }
+.reviewcontent{
+    padding: 0 4em;
+    text-align: left;
+}
+.profilecont{
+    align-items: center;
+}
+.fa-solid, .fas {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 1.5em;
+    color: white;
+  }
+
+  .reviewcontent h3{
+
+    font-size: 1.5em;
+    margin-top: 0.5em;
+  }
+  .inputBox i {
+    color: white;
+  }
+  #search-btn i{
+    color: white;
+  }
+  #search-btn i{
+    color: white;
+  }
+  #cart-btn i{
+    color: white;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .header #menu-btn{
+        display: block;
+    }
+
+    .navbar{
+        overflow: hidden;
+        height: 0px;
+    }
+    .home{
+        flex-wrap: wrap;
+    }
+    .content{
+        margin-top: 12em;
+    }
+   
+  }
+
+  .header>.active{
+    height: fit-content;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 94px;
+    background: var(--cardbg);
+    width: 80%;
+  }
+
+  .buttons{
+    display: flex;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .home .content h3 {
+        font-size: 6vw;
+      }
+      .pcontainer{
+        width: 80vw;
+        margin-right: 2em;
+        
+      }
+      .pcontainer p{
+        font-size: 1vw;
+      }
+      .home .content p{
+        font-size: 2vw;
+    }
+  }
+
+  .mysearchbtn{
+    color: white;
+  }
+
+  .footer .share a{
+
+    color:  white;
+  }
+  .footer .links a{
+
+    color:  white;
+  }
+
+  .footer .search .search-input {
+    width: 30rem;
+    color: black;
+  }
+
+  .header .search-form input {
+    width: 100%;
+    color: black;
+  }
+
+ 

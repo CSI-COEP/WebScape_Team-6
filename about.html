@@ -8,17 +8,22 @@
     <link rel="stylesheet" href="style.css">
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>#</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<title>Fast Food Delivery</title>
+    
 </head>
 <body>
     <header class="header" >
         <a href="#" class="logo">
-            <img src="" alt="logo">
+            <img src="mylogo.png" class="mylogo" alt="">
         </a>
         <nav class="navbar">
-            <a href="./index.html">home</a>
-            <a href="./about.html" class="active" >about</a>
-            <a href="./menu.html" >menu</a>
+            <a href="./index.html" class="active">home</a>
+            <a href="./about.html">about</a>
+            <a href="./menu.html">menu</a>
             <a href="./products.html">products</a>
             <a href="./review.html">review</a>
             <a href="./contact.html">contact</a>
@@ -37,7 +42,9 @@
         </div>
         <div class="search-form">
             <input type="text" class="search-input" id="search-box" placeholder="Search">
-            <i class="fas fa-search"></i>
+            <div id="searchfor">
+                <i class="fas fa-search" ></i>
+            </div>
         </div>
         <div class="cart-items-container">
             <div class="cart-item">
@@ -53,7 +60,7 @@
                 <img src="pngwing.com (2).png" alt="menu">
                 <div class="content">
                     <h3>cart item 02</h3>
-                    <div class="price">$16.99 </div>
+                    <div class="price">$</div>
                 </div>
             </div>
             <div class="cart-item">
@@ -61,7 +68,7 @@
                 <img src="pngwing.com (3).png" alt="menu">
                 <div class="content">
                     <h3>cart item 03</h3>
-                    <div class="price">$13.99 </div>
+                    <div class="price">$ </div>
                 </div>
             </div>
             <div class="cart-item">
@@ -69,7 +76,7 @@
                 <img src="pngwing.com (4).png" alt="menu">
                 <div class="content">
                     <h3>cart item 04</h3>
-                    <div class="price">$12.99 </div>
+                    <div class="price">$ </div>
                 </div>
             </div>
             <a href="#" class="btn">check out </a>
@@ -80,7 +87,7 @@
 
         <div class="row">
             <div class="image">
-                <img src="./image/pngwing.com (7).png" alt="">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/04/7a/5c/b8/hotel-sandy-s-tower.jpg" alt="" class="myabtimg">
             </div>
             <div class="content">
                 <h3>What is the secret receipe of our burgers</h3>
@@ -89,13 +96,20 @@
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia officia id et, corrupti assumenda.</p>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia officia id et, corrupti assumenda.</p>
                 </div>
-                    <a href="#" class="btn">Learn More</a>
+                <div class="learnmore">
+
+                    <a href="#" class="btn ordernowbtn">Learn More</a>
+                </div>
             </div>
         </div>
     </section>
   
 
-<script src="./script.js"></script>
-
+    <script src="./script.js"></script>
+    <script src="./script2.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
