@@ -1,426 +1,505 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS LINK -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<!-- email -->
-<script src=
-"https://smtpjs.com/v3/smtp.js">
-</script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- email -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-<script type="text/javascript">
-function sendEmail() {
-Email.send({
-Host: "smtp.gmail.com",
-Username: "sender@email_address.com",
-Password: "Enter your password",
-To: 'receiver@email_address.com',
-From: "sender@email_address.com",
-Subject: "Sending Email using javascript",
-Body: "Well that was easy!!",
-})
-.then(function (message) {
-alert("mail sent successfully")
-});
-}
-</script>
-<!--  -->
+    <script type="text/javascript">
+      function sendEmail() {
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "sender@email_address.com",
+          Password: "Enter your password",
+          To: "receiver@email_address.com",
+          From: "sender@email_address.com",
+          Subject: "Sending Email using javascript",
+          Body: "Well that was easy!!",
+        }).then(function (message) {
+          alert("mail sent successfully");
+        });
+      }
+    </script>
+    <!--  -->
     <title>Fast Food Delivery</title>
-</head>
-<body>
-    <header class="header" >
-        <a href="#" class="logo">
-            <img src="mylogo.png" class="mylogo" alt="">
-        </a>
-        <nav class="navbar">
-            <a href="./index.html" class="active">home</a>
-            <a href="./about.html">about</a>
-            <a href="./menu.html">menu</a>
-            <a href="./products.html">products</a>
-            <a href="./review.html">review</a>
-            <a href="./contact.html">contact</a>
-            <a href="./blog.html">blog</a>
-        </nav>
-        <div class="buttons">
-            <button id="search-btn">
-                <i class="fas fa-search" ></i>
-            </button>
-            <button id="cart-btn">
-                <i class="fas fa-shopping-cart"></i>
-            </button>
-            <button id="menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="mylogo.png" class="mylogo" alt="" />
+      </a>
+      <nav class="navbar">
+        <a href="./index.html" class="active">home</a>
+        <a href="./about.html">about</a>
+        <a href="./menu.html">menu</a>
+        <a href="./products.html">products</a>
+        <a href="./review.html">review</a>
+        <a href="./contact.html">contact</a>
+        <a href="./blog.html">blog</a>
+      </nav>
+      <div class="buttons">
+        <button id="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+        <button id="cart-btn">
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+        <button id="menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <div class="search-form">
+        <input
+          type="text"
+          class="search-input"
+          id="search-box"
+          placeholder="Search"
+        />
+        <div id="searchfor">
+          <i class="fas fa-search"></i>
         </div>
-        <div class="search-form">
-            <input type="text" class="search-input" id="search-box" placeholder="Search">
-            <div id="searchfor">
-                <i class="fas fa-search" ></i>
-            </div>
-            
+      </div>
+      <div class="cart-items-container">
+        <div class="cart-item">
+          <i class="fas fa-times"></i>
+          <img src="pngwing.com (1).png" alt="menu" />
+          <div class="content">
+            <h3>cart item 01</h3>
+            <div class="price">$15.99</div>
+          </div>
         </div>
-        <div class="cart-items-container">
-            <div class="cart-item">
-                <i class="fas fa-times"></i>
-                <img src="pngwing.com (1).png" alt="menu">
-                <div class="content">
-                    <h3>cart item 01</h3>
-                    <div class="price">$15.99 </div>
-                </div>
-            </div>
-            <div class="cart-item">
-                <i class="fas fa-times"></i>
-                <img src="pngwing.com (2).png" alt="menu">
-                <div class="content">
-                    <h3>cart item 02</h3>
-                    <div class="price">$</div>
-                </div>
-            </div>
-            <div class="cart-item">
-                <i class="fas fa-times"></i>
-                <img src="pngwing.com (3).png" alt="menu">
-                <div class="content">
-                    <h3>cart item 03</h3>
-                    <div class="price">$ </div>
-                </div>
-            </div>
-            <div class="cart-item">
-                <i class="fas fa-times"></i>
-                <img src="pngwing.com (4).png" alt="menu">
-                <div class="content">
-                    <h3>cart item 04</h3>
-                    <div class="price">$ </div>
-                </div>
-            </div>
-            <a href="#" class="btn">check out </a>
+        <div class="cart-item">
+          <i class="fas fa-times"></i>
+          <img src="pngwing.com (2).png" alt="menu" />
+          <div class="content">
+            <h3>cart item 02</h3>
+            <div class="price">$</div>
+          </div>
         </div>
+        <div class="cart-item">
+          <i class="fas fa-times"></i>
+          <img src="pngwing.com (3).png" alt="menu" />
+          <div class="content">
+            <h3>cart item 03</h3>
+            <div class="price">$</div>
+          </div>
+        </div>
+        <div class="cart-item">
+          <i class="fas fa-times"></i>
+          <img src="pngwing.com (4).png" alt="menu" />
+          <div class="content">
+            <h3>cart item 04</h3>
+            <div class="price">$</div>
+          </div>
+        </div>
+        <a href="#" class="btn">check out </a>
+      </div>
     </header>
     <section class="home" id="home">
-        <div class="content">
-            <div data-aos="slide-right">
-                <h3>Fast Food Delivery</h3>
-            </div>
-        
+      <div class="content">
+        <div data-aos="slide-right">
+          <h3>Fast Food Delivery</h3>
+        </div>
+
         <div class="pcontainer" data-aos="fade-right">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt perferendis obcaecati iste voluptatum, quaerat nihil magnam numquam sint? </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+            perferendis obcaecati iste voluptatum, quaerat nihil magnam numquam
+            sint?
+          </p>
         </div>
         <a href="#" class="btn ordernowbtn">order now</a>
-        
-        </div>
-        <div class="myimg" data-aos="slide-up">
-            <img src="mylogo.png" alt="">
-        </div>
+      </div>
+      <div class="myimg" data-aos="slide-up">
+        <img src="mylogo.png" alt="" />
+      </div>
     </section>
 
     <section class="menu" id="menu">
-        <div data-aos="slide-right">
+      <div data-aos="slide-right">
+        <h1 class="heading">our <span>menu</span></h1>
+      </div>
+      <div class="box-container" id="menubox" data-aos="slide-up">
+        <div class="box">
+          <div class="box-head">
+            <img
+              src="https://img.freepik.com/free-photo/top-view-pepperoni-pizza-sliced-into-six-slices_141793-2157.jpg?w=2000"
+              alt=""
+            />
 
-            <h1 class="heading">our <span>menu</span></h1>
+            <span class="menu-category">Pizza</span>
+            <h3>6 Mini Pizzas</h3>
+          </div>
+          <div class="box-bottom">
+            <div class="price">$104.99</div>
+            <a href="#" class="btn"><i class="fas fa-shopping-cart"></i></a>
+          </div>
         </div>
-        <div class="box-container" id="menubox" data-aos="slide-up">
-            <div class="box">
+        <div class="box">
+          <div class="box-head">
+            <img
+              src="https://img.freepik.com/free-photo/top-view-pepperoni-pizza-sliced-into-six-slices_141793-2157.jpg?w=2000"
+              alt=""
+            />
 
-                <div class="box-head">
-                    <img src="https://img.freepik.com/free-photo/top-view-pepperoni-pizza-sliced-into-six-slices_141793-2157.jpg?w=2000" alt="">
-                    
-                    <span class="menu-category">Pizza</span>
-                    <h3>6 Mini Pizzas</h3>
-                    
-                </div>
-                <div class="box-bottom">
-                    <div class="price">$104.99</div>
-                    <a href="#" class="btn"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </div>
-            <div class="box">
-
-                <div class="box-head">
-                    <img src="https://img.freepik.com/free-photo/top-view-pepperoni-pizza-sliced-into-six-slices_141793-2157.jpg?w=2000" alt="">
-                    
-                    <span class="menu-category">Pizza</span>
-                    <h3>6 Mini Pizzas</h3>
-                    
-                </div>
-                <div class="box-bottom">
-                    <div class="price">$104.99</div>
-                    <a href="#" class="btn"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </div>
-            <div class="box">
-
-                <div class="box-head">
-                    <img src="https://img.freepik.com/free-photo/top-view-pepperoni-pizza-sliced-into-six-slices_141793-2157.jpg?w=2000" alt="">
-                    
-                    <span class="menu-category">Pizza</span>
-                    <h3>6 Mini Pizzas</h3>
-                    
-                </div>
-                <div class="box-bottom">
-                    <div class="price">$104.99</div>
-                    <a href="#" class="btn"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </div>
-            <div class="box">
-
-                <div class="box-head">
-                    <img src="https://img.freepik.com/free-photo/top-view-pepperoni-pizza-sliced-into-six-slices_141793-2157.jpg?w=2000" alt="">
-                    
-                    <span class="menu-category">Pizza</span>
-                    <h3>6 Mini Pizzas</h3>
-                    
-                </div>
-                <div class="box-bottom">
-                    <div class="price">$104.99</div>
-                    <a href="#" class="btn"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </div>
+            <span class="menu-category">Pizza</span>
+            <h3>6 Mini Pizzas</h3>
+          </div>
+          <div class="box-bottom">
+            <div class="price">$104.99</div>
+            <a href="#" class="btn"><i class="fas fa-shopping-cart"></i></a>
+          </div>
         </div>
+        <div class="box">
+          <div class="box-head">
+            <img
+              src="https://img.freepik.com/free-photo/top-view-pepperoni-pizza-sliced-into-six-slices_141793-2157.jpg?w=2000"
+              alt=""
+            />
+
+            <span class="menu-category">Pizza</span>
+            <h3>6 Mini Pizzas</h3>
+          </div>
+          <div class="box-bottom">
+            <div class="price">$104.99</div>
+            <a href="#" class="btn"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-head">
+            <img
+              src="https://img.freepik.com/free-photo/top-view-pepperoni-pizza-sliced-into-six-slices_141793-2157.jpg?w=2000"
+              alt=""
+            />
+
+            <span class="menu-category">Pizza</span>
+            <h3>6 Mini Pizzas</h3>
+          </div>
+          <div class="box-bottom">
+            <div class="price">$104.99</div>
+            <a href="#" class="btn"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+      </div>
     </section>
-  
+
     <section class="products" id="products">
-        <div data-aos="slide-right">
-
-            <h1 class="heading">our <span>products</span> </h1>
+      <div data-aos="slide-right">
+        <h1 class="heading">our <span>products</span></h1>
+      </div>
+      <div class="box-container" data-aos="slide-up">
+        <div class="box">
+          <div class="box-head">
+            <span class="title">mini burger</span>
+            <a href="#" class="name">Bacon Burger</a>
+          </div>
+          <div class="image">
+            <img
+              src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YnVyZ2VyfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+              alt=""
+            />
+          </div>
+          <div class="box-bottom">
+            <div class="info">
+              <b class="price">$24</b>
+              <span class="amount">110gr / 300 Cal</span>
+            </div>
+            <div class="product-btn">
+              <a href="#">
+                <i class="fas fa-plus"></i>
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="box-container" data-aos="slide-up">
-            <div class="box">
-                <div class="box-head">
-                    <span class="title">mini burger</span>
-                    <a href="#" class="name">Bacon Burger</a>
-                </div>
-                <div class="image">
-                    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YnVyZ2VyfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="">
-                </div>
-                <div class="box-bottom">
-                    <div class="info">
-                        <b class="price">$24</b>
-                        <span class="amount">110gr / 300 Cal</span>
-                    </div>
-                    <div class="product-btn">
-                        <a href="#">
-                            <i class="fas fa-plus"></i>
-                        </a>
-                    </div>
-                </div>
+        <div class="box">
+          <div class="box-head">
+            <span class="title">cheese burger</span>
+            <a href="#" class="name">cheese Burger</a>
+          </div>
+          <div class="image">
+            <img
+              src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YnVyZ2VyfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+              alt=""
+            />
+          </div>
+          <div class="box-bottom">
+            <div class="info">
+              <b class="price">$25</b>
+              <span class="amount">140gr / 2500 Cal</span>
             </div>
-            <div class="box">
-                <div class="box-head">
-                    <span class="title">cheese burger</span>
-                    <a href="#" class="name">cheese Burger</a>
-                </div>
-                <div class="image">
-                    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YnVyZ2VyfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="">
-                </div>
-                <div class="box-bottom">
-                    <div class="info">
-                        <b class="price">$25</b>
-                        <span class="amount">140gr / 2500 Cal</span>
-                    </div>
-                    <div class="product-btn">
-                        <a href="#">
-                            <i class="fas fa-plus"></i>
-                        </a>
-                    </div>
-                </div>
+            <div class="product-btn">
+              <a href="#">
+                <i class="fas fa-plus"></i>
+              </a>
             </div>
-            <div class="box">
-                <div class="box-head">
-                    <span class="title">Double burger</span>
-                    <a href="#" class="name">Double Burger</a>
-                </div>
-                <div class="image">
-                    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YnVyZ2VyfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="">
-                </div>
-                <div class="box-bottom">
-                    <div class="info">
-                        <b class="price">$24.00</b>
-                        <span class="amount">440gr / 600 Cal</span>
-                    </div>
-                    <div class="product-btn">
-                        <a href="#">
-                            <i class="fas fa-plus"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="box">
+          <div class="box-head">
+            <span class="title">Double burger</span>
+            <a href="#" class="name">Double Burger</a>
+          </div>
+          <div class="image">
+            <img
+              src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YnVyZ2VyfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+              alt=""
+            />
+          </div>
+          <div class="box-bottom">
+            <div class="info">
+              <b class="price">$24.00</b>
+              <span class="amount">440gr / 600 Cal</span>
+            </div>
+            <div class="product-btn">
+              <a href="#">
+                <i class="fas fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-   
-        
-   
+
     <section class="about" id="about">
-        <div data-aos="slide-right">
+      <div data-aos="slide-right">
+        <h1 class="heading">about <span>us</span></h1>
+      </div>
 
-            <h1 class="heading">about <span>us</span> </h1>
+      <div class="row">
+        <div class="image" data-aos="slide-right">
+          <img
+            src="https://media-cdn.tripadvisor.com/media/photo-s/04/7a/5c/b8/hotel-sandy-s-tower.jpg"
+            alt=""
+            class="myabtimg"
+          />
         </div>
-
-        <div class="row" >
-            <div class="image" data-aos="slide-right">
-                <img src="https://media-cdn.tripadvisor.com/media/photo-s/04/7a/5c/b8/hotel-sandy-s-tower.jpg" alt="" class="myabtimg">
-            </div>
-            <div class="content" data-aos="slide-left">
-                <h3>What is the secret receipe of our burgers</h3>
-                <div class="paragraph">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia officia id et, corrupti assumenda.</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia officia id et, corrupti assumenda.</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia officia id et, corrupti assumenda.</p>
-                </div>
-                <div class="learnmore">
-
-                    <a href="#" class="btn ordernowbtn">Learn More</a>
-                </div>
-            </div>
+        <div class="content" data-aos="slide-left">
+          <h3>What is the secret receipe of our burgers</h3>
+          <div class="paragraph">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
+              officia id et, corrupti assumenda.
+            </p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
+              officia id et, corrupti assumenda.
+            </p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
+              officia id et, corrupti assumenda.
+            </p>
+          </div>
+          <div class="learnmore">
+            <a href="#" class="btn ordernowbtn">Learn More</a>
+          </div>
         </div>
+      </div>
     </section>
-   
-    
+
     <section class="review" id="review">
-        <h1 class="heading">customer's <span>review</span> </h1>
-        <div>
-            <div class="box reviewbox" data-aos="slide-left">
-                <div class="profilecont">
-                    <img src="https://res.cloudinary.com/demo/image/upload/docs/model.jpg" alt="quote" class="profile">
-                </div>
-                <div class="reviewcontent">
-                    <p> Dicta totam suscipit vero praesentium excepturi facilis, fuga at architecto dolor tempora molestias quam dignissimos sit. Molestiae temporibus ratione quas placeat possimus!</p>
-                <h3>Patrick Hellinger</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                </div>
-                
+      <h1 class="heading">customer's <span>review</span></h1>
+      <div>
+        <div class="box reviewbox" data-aos="slide-left">
+          <div class="profilecont">
+            <img
+              src="https://res.cloudinary.com/demo/image/upload/docs/model.jpg"
+              alt="quote"
+              class="profile"
+            />
+          </div>
+          <div class="reviewcontent">
+            <p>
+              Dicta totam suscipit vero praesentium excepturi facilis, fuga at
+              architecto dolor tempora molestias quam dignissimos sit. Molestiae
+              temporibus ratione quas placeat possimus!
+            </p>
+            <h3>Patrick Hellinger</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
             </div>
-            
-            <div class="box reviewbox" data-aos="slide-right">
-                <div class="profilecont">
-                    <img src="https://res.cloudinary.com/demo/image/upload/docs/model.jpg" alt="quote" class="profile">
-                </div>
-                <div class="reviewcontent">
-                    <p> Dicta totam suscipit vero praesentium excepturi facilis, fuga at architecto dolor tempora molestias quam dignissimos sit. Molestiae temporibus ratione quas placeat possimus!</p>
-                <h3>Patrick Hellinger</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                </div>
-                
-            </div>
-            <div class="box reviewbox" data-aos="slide-right">
-                <div class="profilecont">
-                    <img src="https://res.cloudinary.com/demo/image/upload/docs/model.jpg" alt="quote" class="profile">
-                </div>
-                <div class="reviewcontent">
-                    <p> Dicta totam suscipit vero praesentium excepturi facilis, fuga at architecto dolor tempora molestias quam dignissimos sit. Molestiae temporibus ratione quas placeat possimus!</p>
-                <h3>Patrick Hellinger</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                </div>
-                
-            </div><div class="box reviewbox" data-aos="slide-left">
-                <div class="profilecont">
-                    <img src="https://res.cloudinary.com/demo/image/upload/docs/model.jpg" alt="quote" class="profile">
-                </div>
-                <div class="reviewcontent">
-                    <p> Dicta totam suscipit vero praesentium excepturi facilis, fuga at architecto dolor tempora molestias quam dignissimos sit. Molestiae temporibus ratione quas placeat possimus!</p>
-                <h3>Patrick Hellinger</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                </div>
-                
-            </div><div class="box reviewbox" data-aos="slide-right">
-                <div class="profilecont">
-                    <img src="https://res.cloudinary.com/demo/image/upload/docs/model.jpg" alt="quote" class="profile">
-                </div>
-                <div class="reviewcontent">
-                    <p> Dicta totam suscipit vero praesentium excepturi facilis, fuga at architecto dolor tempora molestias quam dignissimos sit. Molestiae temporibus ratione quas placeat possimus!</p>
-                <h3>Patrick Hellinger</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                </div>
-                
-            </div><div class="box reviewbox" data-aos="slide-left">
-                <div class="profilecont">
-                    <img src="https://res.cloudinary.com/demo/image/upload/docs/model.jpg" alt="quote" class="profile">
-                </div>
-                <div class="reviewcontent">
-                    <p> Dicta totam suscipit vero praesentium excepturi facilis, fuga at architecto dolor tempora molestias quam dignissimos sit. Molestiae temporibus ratione quas placeat possimus!</p>
-                <h3>Patrick Hellinger</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                </div>
-                
-            </div>
+          </div>
         </div>
-    </section> 
-    
-    <section class="contact" id="contact" data-aos="slide-up">
-        <h1 class="heading">contact <span>us</span> </h1>
-        <div class="row">
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d983.3235940970079!2d8.540719273659763!3d47.3713194174677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a00aa1e1d17%3A0x278f576acdd580f5!2sStorchen%20Z%C3%BCrich%20-%20Lifestyle%20Boutique%20Hotel!5e0!3m2!1sde!2sch!4v1658505945506!5m2!1sde!2sch" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <form>
-                <h3>get in touch</h3>
-                <div class="inputBox">
-                    <i class="fas fa-user"></i>
-                    <input type="text" placeholder="name">
-                </div>
-                <div class="inputBox">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="email">
-                </div>
-                <div class="inputBox">
-                    <i class="fas fa-phone"></i>
-                    <input type="number" placeholder="number">
-                </div>
-                <input type="button" value="Send Email"
-onclick="sendEmail()" />
-            </form>
-        </div>
-    </section>
-   
-   
-   
 
-<script src="./script.js"></script>
-<script src="./script2.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-</body>
+        <div class="box reviewbox" data-aos="slide-right">
+          <div class="profilecont">
+            <img
+              src="https://res.cloudinary.com/demo/image/upload/docs/model.jpg"
+              alt="quote"
+              class="profile"
+            />
+          </div>
+          <div class="reviewcontent">
+            <p>
+              Dicta totam suscipit vero praesentium excepturi facilis, fuga at
+              architecto dolor tempora molestias quam dignissimos sit. Molestiae
+              temporibus ratione quas placeat possimus!
+            </p>
+            <h3>Patrick Hellinger</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <div class="box reviewbox" data-aos="slide-right">
+          <div class="profilecont">
+            <img
+              src="https://res.cloudinary.com/demo/image/upload/docs/model.jpg"
+              alt="quote"
+              class="profile"
+            />
+          </div>
+          <div class="reviewcontent">
+            <p>
+              Dicta totam suscipit vero praesentium excepturi facilis, fuga at
+              architecto dolor tempora molestias quam dignissimos sit. Molestiae
+              temporibus ratione quas placeat possimus!
+            </p>
+            <h3>Patrick Hellinger</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <div class="box reviewbox" data-aos="slide-left">
+          <div class="profilecont">
+            <img
+              src="https://res.cloudinary.com/demo/image/upload/docs/model.jpg"
+              alt="quote"
+              class="profile"
+            />
+          </div>
+          <div class="reviewcontent">
+            <p>
+              Dicta totam suscipit vero praesentium excepturi facilis, fuga at
+              architecto dolor tempora molestias quam dignissimos sit. Molestiae
+              temporibus ratione quas placeat possimus!
+            </p>
+            <h3>Patrick Hellinger</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <div class="box reviewbox" data-aos="slide-right">
+          <div class="profilecont">
+            <img
+              src="https://res.cloudinary.com/demo/image/upload/docs/model.jpg"
+              alt="quote"
+              class="profile"
+            />
+          </div>
+          <div class="reviewcontent">
+            <p>
+              Dicta totam suscipit vero praesentium excepturi facilis, fuga at
+              architecto dolor tempora molestias quam dignissimos sit. Molestiae
+              temporibus ratione quas placeat possimus!
+            </p>
+            <h3>Patrick Hellinger</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <div class="box reviewbox" data-aos="slide-left">
+          <div class="profilecont">
+            <img
+              src="https://res.cloudinary.com/demo/image/upload/docs/model.jpg"
+              alt="quote"
+              class="profile"
+            />
+          </div>
+          <div class="reviewcontent">
+            <p>
+              Dicta totam suscipit vero praesentium excepturi facilis, fuga at
+              architecto dolor tempora molestias quam dignissimos sit. Molestiae
+              temporibus ratione quas placeat possimus!
+            </p>
+            <h3>Patrick Hellinger</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" data-aos="slide-up">
+      <h1 class="heading">contact <span>us</span></h1>
+      <div class="row">
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d983.3235940970079!2d8.540719273659763!3d47.3713194174677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a00aa1e1d17%3A0x278f576acdd580f5!2sStorchen%20Z%C3%BCrich%20-%20Lifestyle%20Boutique%20Hotel!5e0!3m2!1sde!2sch!4v1658505945506!5m2!1sde!2sch"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <form>
+          <h3>get in touch</h3>
+          <div class="inputBox">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="name" />
+          </div>
+          <div class="inputBox">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="email" />
+          </div>
+          <div class="inputBox">
+            <i class="fas fa-phone"></i>
+            <input type="number" placeholder="number" />
+          </div>
+          <input type="button" value="Send Email" onclick="sendEmail()" />
+        </form>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+    <script src="./script2.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
