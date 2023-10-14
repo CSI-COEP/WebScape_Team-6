@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Products from "./pages/Products";
 import Menu from "./pages/Menu";
+import Reviews from "./pages/Reviews";
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,7 @@ function App() {
       <Menu></Menu>
       <Products></Products>
       <About></About>
+      <Reviews></Reviews>
     </div>
   );
 }
